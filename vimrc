@@ -1,0 +1,293 @@
+" The default vimrc file.
+"
+" Maintainer:	Bram Moolenaar <Bram@vim.org>
+" Last change:	2016 Sep 02
+"
+" This is loaded if no vimrc file was found.
+" Except when Vim is run with "-u NONE" or "-C".
+" Individual settings can be reverted with ":set option&".
+" Other commands can be reverted as mentioned below.
+
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+  finish
+endif
+
+" Bail out if something that ran earlier, e.g. a system wide vimrc, does not
+" want Vim to use these default values.
+if exists('skip_defaults_vim')
+  finish
+endif
+
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
+
+set history=200		" keep 200 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set wildmenu		" display completion matches in a status line
+
+set ttimeout		" time out for key codes
+set ttimeoutlen=100	" wait up to 100ms after Esc for special key
+
+" Show @@@ in the last line if it is truncated.
+set display=truncate
+
+" Show a few lines of context around the cursor.  Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching when it's possible to timeout.
+if has('reltime')
+  set incsearch
+endif
+
+" Do not recognize octal numbers for Ctrl-A and Ctrl-X, most users find it
+" confusing.
+set nrformats-=octal
+
+" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries.
+if has('win32')
+  set guioptions-=t
+endif
+
+" Don't use Ex mode, use Q for formatting.
+" Revert with ":unmap Q".
+map Q gq
+
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
+" Revert with ":iunmap <C-U>".
+inoremap <C-U> <C-G>u<C-U>
+
+" In many terminal emulators the mouse works just fine.  By enabling it you
+" can position the cursor, Visually select and scroll with the mouse.
+if has('mouse')
+  set mouse=a
+endif
+
+" Switch syntax highlighting on when the terminal has colors or when using the
+" GUI (which always has colors).
+if &t_Co > 2 || has("gui_running")
+  " Revert with ":syntax off".
+  syntax on
+
+  " I like highlighting strings inside C comments.
+  " Revert with ":unlet c_comment_strings".
+  let c_comment_strings=1
+endif
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  " Revert with ":filetype off".
+  filetype plugin indent on
+
+  " Put these in an autocmd group, so that you can revert them with:
+  " ":augroup vimStartup | au! | augroup END"
+  augroup vimStartup
+    au!
+
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    autocmd BufReadPost *
+      \ if line("'\"") >= 1 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
+
+  augroup END
+
+endif " has("autocmd")
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+" Revert with: ":delcommand DiffOrig".
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
+
+if has('langmap') && exists('+langremap')
+  " Prevent that the langmap option applies to characters that result from a
+  " mapping.  If set (default), this may break plugins (but it's backward
+  " compatible).
+  set nolangremap
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""MY SETTING"""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+
+" settings, you should do it in this file (/etc/vim/vimrc), since debian.vim
+" will be overwritten everytime an upgrade of the vim packages is performed.
+" It is recommended to make changes after sourcing debian.vim since it alters
+" the value of the 'compatible' option.
+
+" This line should not be removed as it ensures that various options are
+" properly set to work with the Vim-related packages available in Debian.
+runtime! debian.vim
+
+" Uncomment the next line to make Vim more Vi-compatible
+" NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
+" options, so any other options should be set AFTER setting 'compatible'.
+"set compatible
+
+" Vim5 and later versions support syntax highlighting. Uncommenting the next
+" line enables syntax highlighting by default.
+if has("syntax")
+  syntax on
+endif
+
+" If using a dark background within the editing area and syntax highlighting
+" turn on this option as well
+"set background=dark
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+"if has("autocmd")
+"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"endif
+
+" Uncomment the following to have Vim load indentation rules and plugins
+" according to the detected filetype.
+"if has("autocmd")
+"  filetype plugin indent on
+"endif
+
+" The following are commented out as they cause vim to behave a lot
+" differently from regular Vi. They are highly recommended though.
+"set showcmd		" Show (partial) command in status line.
+"set showmatch		" Show matching brackets.
+"set ignorecase		" Do case insensitive matching
+"set smartcase		" Do smart case matching
+"set incsearch		" Incremental search
+"set autowrite		" Automatically save before commands like :next and :make
+"set hidden		" Hide buffers when they are abandoned
+"set mouse=a		" Enable mouse usage (all modes)
+
+" Source a global configuration file if available
+if filereadable("/etc/vim/vimrc.local")
+  source /etc/vim/vimrc.local
+endif
+
+
+if !empty(glob("~/desktop"))
+	cd ~/desktop
+elseif !empty(glob("~/Desktop"))
+	cd ~/Desktop
+elseif !empty(glob("~/桌面/")
+	cd ~/桌面
+endif
+
+syntax enable
+"s"et background=light
+colorscheme monokai 
+set guifont=Source_Code_Pro\ 12
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""set设置""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set hlsearch        "高亮搜索
+set incsearch       "在输入要搜索的文字时，实时匹配
+set ignorecase        "搜索模式里忽略大小写
+set smartcase         "如果搜索模式包含大写字符，就大小写敏感搜索, 全部是小写时就忽略大小写, 前提是要启用 'set ignorecase', 本项才生效
+set incsearch       "在输入要搜索的文字时，实时匹配, 即时跳转到匹配处
+set cursorline                   "突出显示当前行
+set clipboard=unnamedplus	 "将复制,粘贴,剪切, 默认使用+寄存器(linux下是剪切板)
+set wrap		"自动换行, 一行字数超出窗口宽度后自动换行
+set tabstop=4
+set shiftwidth=4            "换行时自动缩进4个空格
+set smarttab   "指定按一次backspace(删除键)就删除shiftwidth(自动缩进)宽度的空格数
+set smartindent                 "启用智能对齐方式
+set expandtab              "将Tab键转换为空格
+set nu
+set rnu
+set autochdir
+set mouse=a
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""映射"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+nnoremap <F5> <ESC> :w <bar> !php % <enter>
+inoremap <F5> <ESC> :w <bar> !php % <enter>
+vnoremap <F5> <ESC> :w <bar> !php % <enter>
+
+noremap <c-s> <esc>:w<CR>
+inoremap <c-s> <esc>:w<CR>a
+
+inoremap <c-v> <esc>"+pa
+inoremap <c-c> "+ya
+
+vnoremap <c-x> x
+noremap <c-c> "+ya
+
+inoremap <c-a> <esc>ggVG
+noremap <c-a> <esc>ggVG
+
+vnoremap  /  I//<esc>
+vnoremap  //  ^xx
+
+"" 选中(可视模式)后粘贴, 不会把选中的东西复制到寄存器, phpstorm下失效
+"xnoremap p  "_dP		 
+" 选中(可视模式)后粘贴, 不会把选中的东西复制到寄存器
+vnoremap p  "_dP		 
+
+"便于高亮搜素后, 按esc键取消
+"nnoremap  <c-e>  jzz 
+"便于阅读代码, ctrl+e或ctrl+y使屏幕向上(下)移动一行时, 自动让光标处于屏幕中间行
+"nnoremap  <c-y>  kzz
+inoremap  jj  <esc>	 " 便于在插入模式快速返回普通模式然后进行导航等命令
+
+inoremap <c-k> <up>
+inoremap <c-l> <Right>
+inoremap <c-j> <down>
+inoremap <c-h> <Left>
+inoremap <c-x> <delete>
+inoremap <c-d> <esc><c-d>
+inoremap <c-u> <esc><c-u>
+inoremap <c-y> <esc><c-y>a
+inoremap <c-e> <esc><c-e>a
+inoremap <c-b> <esc>bi
+
+nnoremap  <esc><esc>  <esc>:nohl<cr><esc>
+nnoremap  <enter> i<enter><esc>
+"autocmd VimEnter * normal <esc>
+
+
+
