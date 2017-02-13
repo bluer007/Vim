@@ -201,6 +201,12 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+" Set Vim help to Chinese and utf-8 encoding
+if version >= 603
+    set helplang=cn
+    set encoding=utf-8
+    set fileencoding=utf-8
+endif
 
 if !empty(glob("~/desktop"))
 	cd ~/desktop
@@ -242,7 +248,13 @@ set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""映射"""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F3> <ESC> :w <bar> !node % <enter>
+inoremap <F3> <ESC> :w <bar> !node % <enter>
+vnoremap <F3> <ESC> :w <bar> !node % <enter>
 
+nnoremap <F4> <ESC> :w <bar> !ruby % <enter>
+inoremap <F4> <ESC> :w <bar> !ruby % <enter>
+vnoremap <F4> <ESC> :w <bar> !ruby % <enter>
 
 nnoremap <F5> <ESC> :w <bar> !php % <enter>
 inoremap <F5> <ESC> :w <bar> !php % <enter>
@@ -254,8 +266,12 @@ inoremap <c-s> <esc>:w<CR>a
 inoremap <c-v> <esc>"+pa
 inoremap <c-c> "+ya
 
-vnoremap <c-x> x
+vnoremap <c-c> "+ya
+vnoremap <c-x> "+da
+vnoremap <c-v> "_dP
+
 noremap <c-c> "+ya
+noremap <c-v> "+ya
 
 inoremap <c-a> <esc>ggVG
 noremap <c-a> <esc>ggVG

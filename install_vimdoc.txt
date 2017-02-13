@@ -1,0 +1,52 @@
+安装vim中文帮助vimcdoc - 金石开 - 博客园  
+http://www.cnblogs.com/zhcncn/p/4042926.html
+
+安装vim中文帮助vimcdoc
+1. 下载：
+下载页面：http://vimcdoc.sourceforge.net/
+
+选择“Latest platform independent tarball, including an Linux/BSD installation script”【1】下载。
+
+ 
+
+2. 安装：
+网上好多人所说的“解压，把doc目录下的文件复制到~/.vim/doc下即可”是不起作用的。这里参考【2】中的步骤进行安装。
+
+1. 解压tar.gz 包：
+
+tar -xzvf vimcdoc-1.9.0.tar.gz.tar.gz
+ 
+
+2. 然后进入 vimcdoc-1.9.0 目录并执行
+
+./vimcdoc.sh -i
+该安装程序会自动识别 Vim 的安装路径，将中文的文档拷贝到相应的地方。原有的英文文档不受影响。
+
+NOTE: 使用-i选项的话，缺省同时安装 vimcdoc.vim 全局插件，该插件会在.vim下生成一个plugin目录。由于我们使用pathgeon来管理插件，而plugin下的插件在pathgeon管理之外。为此可以在安装时跳过 vimcdoc.vim 插件。 
+可是使用 -I选项来安装：
+
+./vimcdoc.sh -I
+如果没 vimcdoc.vim 插件（该插件设置缺省编码为 utf-8，使得每次使用:help 命令时都优先使用中文的帮助文档），但又想使用 :help 命令时都优先使用中文的帮助文档，可以在 vimrc 文件中配置：
+
+" Set Vim help to Chinese and utf-8 encoding
+if version >= 603
+    set helplang=cn
+    set encoding=utf-8
+    set fileencoding=utf-8
+endif
+ 
+
+3. 卸载：
+
+Linux： 
+如果你是使用的自动安装脚本安装的话，只要运行下面的命令即可：
+
+./vimcdoc.sh -u
+但必须用与安装时同样的用户名 。
+
+ 
+
+Reference
+【1】Download Links（https://sourceforge.net/projects/vimcdoc/files/vimcdoc/vimcdoc-1.9.0.tar.gz/download）
+
+【2】【学习笔记-VIM】Vim初学 - Vim中文帮助文档安装（http://blog.csdn.net/wo0621/article/details/12956173）
