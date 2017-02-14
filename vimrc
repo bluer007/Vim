@@ -263,15 +263,17 @@ vnoremap <F5> <ESC> :w <bar> !php % <enter>
 noremap <c-s> <esc>:w<CR>
 inoremap <c-s> <esc>:w<CR>a
 
-inoremap <c-v> <esc>"+pa
-inoremap <c-c> "+ya
+inoremap <c-c> ya
+inoremap <c-x> <esc>da
+inoremap <c-v> <esc>"_dPa
 
-vnoremap <c-c> "+ya
-vnoremap <c-x> "+da
-vnoremap <c-v> "_dP
+vnoremap <c-c> ya
+vnoremap <c-x> da
+vnoremap <c-v> "_dPa
 
-noremap <c-c> "+ya
-noremap <c-v> "+ya
+nnoremap <c-c> y
+nnoremap <c-x> d
+nnoremap <c-v> "_dP
 
 inoremap <c-a> <esc>ggVG
 noremap <c-a> <esc>ggVG
