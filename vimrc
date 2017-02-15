@@ -217,7 +217,7 @@ elseif !empty(glob("~/桌面/")
 endif
 
 syntax enable
-"s"et background=light
+"set background=light
 colorscheme monokai 
 set guifont=Source_Code_Pro\ 12
 
@@ -225,6 +225,7 @@ set guifont=Source_Code_Pro\ 12
 """"""""""""""set设置""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set lines=23 columns=48  "设置初始界面大小
 set hlsearch        "高亮搜索
 set incsearch       "在输入要搜索的文字时，实时匹配
 set ignorecase        "搜索模式里忽略大小写
@@ -263,9 +264,9 @@ vnoremap <F5> <ESC> :w <bar> !php % <enter>
 noremap <c-s> <esc>:w<CR>
 inoremap <c-s> <esc>:w<CR>a
 
-inoremap <c-c> ya
-inoremap <c-x> <esc>da
-inoremap <c-v> <esc>"_dPa
+"不会被使用  inoremap <c-c> ya
+"不会被使用  inoremap <c-x> <esc>da
+inoremap <c-v> <esc>pa
 
 vnoremap <c-c> ya
 vnoremap <c-x> da
@@ -273,7 +274,7 @@ vnoremap <c-v> "_dPa
 
 nnoremap <c-c> y
 nnoremap <c-x> d
-nnoremap <c-v> "_dP
+nnoremap <c-v> p
 
 inoremap <c-a> <esc>ggVG
 noremap <c-a> <esc>ggVG
