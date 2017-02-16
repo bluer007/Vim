@@ -268,7 +268,7 @@ inoremap <c-s> <esc>:w<CR>a
 "不会被使用  inoremap <c-x> <esc>da
 inoremap <c-v> <esc>pa
 
-inoremap <c-^> <esc><c-^>
+inoremap <c-^> <esc>:w<enter><c-^>
 
 vnoremap <c-c> ya
 vnoremap <c-x> da
