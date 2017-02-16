@@ -268,6 +268,8 @@ inoremap <c-s> <esc>:w<CR>a
 "不会被使用  inoremap <c-x> <esc>da
 inoremap <c-v> <esc>pa
 
+inoremap <c-^> <esc><c-^>
+
 vnoremap <c-c> ya
 vnoremap <c-x> da
 vnoremap <c-v> "_dPa
