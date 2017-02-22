@@ -35,7 +35,7 @@ set ttimeout		" time out for key codes
 set ttimeoutlen=100	" wait up to 100ms after Esc for special key
 
 " Show @@@ in the last line if it is truncated.
-set display=truncate
+"set display=truncate
 
 " Show a few lines of context around the cursor.  Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
@@ -208,24 +208,67 @@ if version >= 603
     set fileencoding=utf-8
 endif
 
-if !empty(glob("~/desktop"))
-	cd ~/desktop
-elseif !empty(glob("~/Desktop"))
-	cd ~/Desktop
-elseif !empty(glob("~/桌面/")
-	cd ~/桌面
+
+
+"  < 判断操作系统是否是 Windows 还是 Linux >
+let g:iswindows = 0
+let g:islinux = 0
+if(has("win32") || has("win64") || has("win95") || has("win16"))
+    let g:iswindows = 1
+else
+    let g:islinux = 1
 endif
 
+"  < 判断是终端还是 Gvim >
+if has("gui_running")
+    let g:isGUI = 1
+else
+    let g:isGUI = 0
+endif
+
+
+" Linux系统""""""""""""""""""""""""""""""""""""""""""""""""
+if (g:islinux)
+  "Linux系统 通用设置"""""""""""""""""""""""""""""""""""""
+
+  if !empty(glob("~/desktop"))
+    cd ~/desktop
+  elseif !empty(glob("~/Desktop"))
+    cd ~/Desktop
+  elseif !empty(glob("~/桌面/")
+    cd ~/桌面
+  endif
+
+  "Linux系统 非通用设置""""""""""""""""""""""""""""""""""
+  if (g:isGUI)     " Gvim版本
+    set lines=23 columns=48  "设置初始界面大小
+  else    " 终端版本
+  endif
+
+endif
+
+" Windows系统""""""""""""""""""""""""""""""""""""""""""""
+if(g:iswindows)
+  "Windows系统 通用设置"""""""""""""""""""""""""""""""""""""
+
+  "Windows系统 非通用设置""""""""""""""""""""""""""""""""""
+  if (g:isGUI)     " Gvim版本
+
+  else    " 终端版本
+
+  endif
+
+endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""全局设置(不分系统和GUI)"""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 "set background=light
 colorscheme monokai 
 set guifont=Source_Code_Pro\ 12
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""set设置""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set lines=23 columns=48  "设置初始界面大小
 set hlsearch        "高亮搜索
 set incsearch       "在输入要搜索的文字时，实时匹配
 set ignorecase        "搜索模式里忽略大小写
@@ -249,6 +292,10 @@ set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""映射"""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F2> <ESC> :w <bar> !babel-node % <enter>
+inoremap <F2> <ESC> :w <bar> !babel-node % <enter>
+vnoremap <F2> <ESC> :w <bar> !babel-node % <enter>
+
 nnoremap <F3> <ESC> :w <bar> !node % <enter>
 inoremap <F3> <ESC> :w <bar> !node % <enter>
 vnoremap <F3> <ESC> :w <bar> !node % <enter>
@@ -269,6 +316,7 @@ inoremap <c-s> <esc>:w<CR>a
 inoremap <c-v> <esc>pa
 
 inoremap <c-^> <esc>:w<enter><c-^>
+noremap <c-^> <esc>:w<enter><c-^>
 
 vnoremap <c-c> ya
 vnoremap <c-x> da
