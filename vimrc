@@ -358,5 +358,6 @@ nnoremap  <esc><esc>  <esc>:nohl<cr><esc>
 nnoremap  <enter> i<enter><esc>
 "autocmd VimEnter * normal <esc>
 
+noremap <bs> <esc>i<bs>
 
 
