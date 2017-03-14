@@ -341,7 +341,8 @@ vnoremap p  "_dP
 "nnoremap  <c-e>  jzz 
 "便于阅读代码, ctrl+e或ctrl+y使屏幕向上(下)移动一行时, 自动让光标处于屏幕中间行
 "nnoremap  <c-y>  kzz
-inoremap  jj  <esc>	 " 便于在插入模式快速返回普通模式然后进行导航等命令
+" 便于在插入模式快速返回普通模式然后进行导航等命令
+inoremap  jj  <esc>	 
 
 inoremap <c-k> <up>
 inoremap <c-l> <Right>
@@ -410,7 +411,15 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 command E :NERDTreeToggle<CR>
 
+"neocomplete.vim启用
+"let g:neocomplete#enable_at_startuT = 1
 
+
+"let g:SuperTabDefaultCompletionType="context"   
+let g:SuperTabDefaultCompletionType="<c-n>"
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length = 2
 
 
 """"""""""""""vim-plug插件管理器"""""""""""""""""""""
@@ -419,7 +428,10 @@ call plug#begin('~/.vim/plugged')
 "文件搜索
 Plug 'https://github.com/junegunn/fzf.git'
 "自动补全
-Plug 'https://github.com/Valloric/YouCompleteMe.git'
+"需要py支持   Plug 'https://github.com/Valloric/YouCompleteMe.git'
+"需要lua支持   Plug 'https://github.com/Shougo/neocomplete.vim.git'
+Plug 'https://github.com/ervandew/supertab.git'
+Plug 'Shougo/neocomplcache.vim'
 "语法检查, 只支持vim8
 "Plug 'w0rp/ale'
 Plug 'https://github.com/vim-syntastic/syntastic.git'
