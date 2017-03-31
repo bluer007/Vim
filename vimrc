@@ -291,8 +291,12 @@ set expandtab              "将Tab键转换为空格
 set nu
 set rnu
 set autochdir
+set autoread
 set mouse=a
 
+" ======= 恢复上次文件打开位置 ======= "  
+set viminfo='10,\"100,:20,%,n~/.viminfo
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -404,8 +408,10 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 "设置切换Buffer快捷键
-nnoremap <C-tab> :bn<CR>
-nnoremap <C-s-tab> :bp<CR>
+noremap <C-tab> :w<cr><bar>:bn<CR>
+noremap <C-s-tab> :w<cr><bar>:bp<CR>
+noremap <C-l> :w<cr><bar>:bn<CR>
+noremap <C-h> :w<cr><bar>:bp<CR>
 
 "syntastic插件需要
 set statusline+=%#warningmsg#
