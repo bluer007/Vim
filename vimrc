@@ -356,6 +356,9 @@ vnoremap p  "_dP
 inoremap  jj  <esc>	 
 inoremap  jk  <esc>	 
 inoremap  <Space>j  <esc>	 
+vnoremap  <Space>j  <esc>	 
+inoremap  <s-Space>  <space>
+vnoremap  <s-Space>  <space>
 
 inoremap <c-k> <up>
 inoremap <c-l> <Right>
