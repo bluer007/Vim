@@ -379,7 +379,73 @@ nnoremap  <enter> i<enter><esc>
 nnoremap <bs> <esc>i<bs>
 vnoremap <bs> c
 
+"设置切换Buffer快捷键
+noremap <C-tab> :w<cr><bar>:bn<CR>
+noremap <C-s-tab> :w<cr><bar>:bp<CR>
+noremap <C-l> <esc>:w<cr><bar>:bn<CR>
+noremap <C-h> <esc>:w<cr><bar>:bp<CR>
+noremap <C-j> <esc>:w<cr><bar><c-w>j
+noremap <C-k> <esc>:w<cr><bar><c-w>k
+""""noremap <C-m> <esc>:wq<cr>
 
+
+
+
+""""""""""""""""""""""""""""""""调用函数区"""""""""""""""""""""""""""""""""""""""""""
+
+noremap <C-m> <esc>:call  CloseBufWin() <cr>
+noremap <c-l> <esc>:call SwitchBufWin("next") <cr>
+noremap <c-h> <esc>:call SwitchBufWin("previous") <cr>
+
+""""""""""""""""""""""""""""""""函数区""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""切换到上一个或下一个buffer或窗口
+function! SwitchBufWin(cmd)
+	let max_buf = bufnr('$')
+	let cur_buf = bufnr('%')
+	let min_buf = 0
+	if a:cmd != "previous"
+	    if cur_buf < max_buf
+			bn
+			return 0
+		else  
+			execute "normal! \<C-w>l"
+			return 1
+		endif  
+	else
+		let find_min = 0
+		while !find_min
+			let min_buf += 1
+			if buflisted(min_buf)
+				let find_min = 1
+			endif
+		endwhile
+		if min_buf < cur_buf
+			bp
+			return 3
+		else
+			execute "normal! \<C-w>h"
+			return 4
+		endif
+	endif
+endfunction  
+ 
+ """关闭当前buffer或窗口
+function! CloseBufWin()
+	let total_buf = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+	if total_buf > 1
+		:wq
+		return 0
+	else  
+		:w
+		bdelete 
+		return 1
+	endif  
+endfunction  
+
+
+
+"""""""""""""""""""""""""""""""" 插件区""""""""""""""""""""""""""""""""""""""""""""""""
 
 " if (g:isidea)
 " "jetbrains系列的ide， 不支持插件
@@ -410,14 +476,6 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 "vim-airline插件,打开tabline功能,方便查看Buffer和切换,省去了minibufexpl插件 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-"设置切换Buffer快捷键
-noremap <C-tab> :w<cr><bar>:bn<CR>
-noremap <C-s-tab> :w<cr><bar>:bp<CR>
-noremap <C-l> <esc>:w<cr><bar>:bn<CR>
-noremap <C-h> <esc>:w<cr><bar>:bp<CR>
-noremap <C-j> <esc>:w<cr><bar><c-w>j
-noremap <C-k> <esc>:w<cr><bar><c-w>k
-noremap <C-m> <esc>:wq<cr>
 
 "syntastic插件需要
 set statusline+=%#warningmsg#
@@ -486,3 +544,15 @@ call plug#end()
 
 
 " endif   "不是作为ideavim使用
+
+
+
+
+
+
+
+
+
+
+
+
