@@ -345,7 +345,7 @@ vnoremap  //  ^xx
 "" 选中(可视模式)后粘贴, 不会把选中的东西复制到寄存器, phpstorm下失效
 "xnoremap p  "_dP		 
 " 选中(可视模式)后粘贴, 不会把选中的东西复制到寄存器
-vnoremap p  "_dP		 
+vnoremap p  "_dp
 
 "便于高亮搜素后, 按esc键取消
 "nnoremap  <c-e>  jzz 
@@ -355,10 +355,10 @@ vnoremap p  "_dP
 " 便于在插入模式快速返回普通模式然后进行导航等命令
 inoremap  jj  <esc>	 
 inoremap  jk  <esc>	 
-inoremap  <Space>j  <esc>	 
-vnoremap  <Space>j  <esc>	 
-inoremap  <s-Space>  <space>
-vnoremap  <s-Space>  <space>
+" inoremap  <Space>j  <esc>	 
+" vnoremap  <Space>j  <esc>	 
+" inoremap  <s-Space>  <space>
+" vnoremap  <s-Space>  <space>
 
 inoremap <c-k> <up>
 inoremap <c-l> <Right>
@@ -413,8 +413,11 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "设置切换Buffer快捷键
 noremap <C-tab> :w<cr><bar>:bn<CR>
 noremap <C-s-tab> :w<cr><bar>:bp<CR>
-noremap <C-l> :w<cr><bar>:bn<CR>
-noremap <C-h> :w<cr><bar>:bp<CR>
+noremap <C-l> <esc>:w<cr><bar>:bn<CR>
+noremap <C-h> <esc>:w<cr><bar>:bp<CR>
+noremap <C-j> <esc>:w<cr><bar><c-w>j
+noremap <C-k> <esc>:w<cr><bar><c-w>k
+noremap <C-m> <esc>:wq<cr>
 
 "syntastic插件需要
 set statusline+=%#warningmsg#

@@ -341,7 +341,7 @@ vnoremap  //  ^xx
 "" 选中(可视模式)后粘贴, 不会把选中的东西复制到寄存器, phpstorm下失效
 "xnoremap p  "_dP		 
 " 选中(可视模式)后粘贴, 不会把选中的东西复制到寄存器
-vnoremap p  "_dP		 
+vnoremap p "_dp		 
 
 "便于高亮搜素后, 按esc键取消
 "nnoremap  <c-e>  jzz 
@@ -351,10 +351,10 @@ vnoremap p  "_dP
 " 便于在插入模式快速返回普通模式然后进行导航等命令
 inoremap  jj  <esc>	 
 inoremap  jk  <esc>	 
-inoremap  <Space>j  <esc>	 
-vnoremap  <Space>j  <esc>	 
-inoremap  <s-Space>  <space>
-vnoremap  <s-Space>  <space>
+" inoremap  <Space>j  <esc>	 
+" vnoremap  <Space>j  <esc>	 
+" inoremap  <s-Space>  <space>
+" vnoremap  <s-Space>  <space>
 
 inoremap <c-k> <up>
 inoremap <c-l> <Right>
