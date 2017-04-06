@@ -349,8 +349,9 @@ vnoremap p "_dp
 "nnoremap  <c-y>  kzz
 
 " 便于在插入模式快速返回普通模式然后进行导航等命令
-inoremap  jj  <esc>	 
-inoremap  jk  <esc>	 
+inoremap  jj  <esc>
+inoremap  jk  <esc>
+inoremap  kj  <esc>
 " inoremap  <Space>j  <esc>	 
 " vnoremap  <Space>j  <esc>	 
 " inoremap  <s-Space>  <space>
@@ -376,8 +377,8 @@ nnoremap <bs> <esc>i<bs>
 vnoremap <bs> c
 
 " 定制格式化和保存全部文件快捷键
-noremap <Space>f <Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR>
-inoremap <Space>f <Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR>
+noremap f<Space> <Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR>
+inoremap f<Space> <Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR>
 
 
 

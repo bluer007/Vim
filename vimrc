@@ -293,6 +293,7 @@ set rnu
 set autochdir
 set autoread
 set mouse=a
+set noswapfile
 
 " ======= 恢复上次文件打开位置 ======= "  
 set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -345,7 +346,7 @@ vnoremap  //  ^xx
 "" 选中(可视模式)后粘贴, 不会把选中的东西复制到寄存器, phpstorm下失效
 "xnoremap p  "_dP		 
 " 选中(可视模式)后粘贴, 不会把选中的东西复制到寄存器
-vnoremap p  "_dp
+vnoremap p  "_dP
 
 "便于高亮搜素后, 按esc键取消
 "nnoremap  <c-e>  jzz 
@@ -353,8 +354,9 @@ vnoremap p  "_dp
 "nnoremap  <c-y>  kzz
 
 " 便于在插入模式快速返回普通模式然后进行导航等命令
-inoremap  jj  <esc>	 
-inoremap  jk  <esc>	 
+inoremap  jj  <esc>
+inoremap  jk  <esc>
+inoremap  kj  <esc>
 " inoremap  <Space>j  <esc>	 
 " vnoremap  <Space>j  <esc>	 
 " inoremap  <s-Space>  <space>
@@ -373,7 +375,6 @@ inoremap <c-b> <esc>bi
 
 nnoremap  <esc><esc>  <esc>:nohl<cr><esc>
 nnoremap  <enter> i<enter><esc>
-"autocmd VimEnter * normal <esc>
 
 "定制删除键功能 
 nnoremap <bs> <esc>i<bs>
@@ -382,25 +383,25 @@ vnoremap <bs> c
 "设置切换Buffer快捷键
 noremap <C-tab> :w<cr><bar>:bn<CR>
 noremap <C-s-tab> :w<cr><bar>:bp<CR>
-noremap <C-l> <esc>:w<cr><bar>:bn<CR>
-noremap <C-h> <esc>:w<cr><bar>:bp<CR>
 noremap <C-j> <esc>:w<cr><bar><c-w>j
 noremap <C-k> <esc>:w<cr><bar><c-w>k
-""""noremap <C-m> <esc>:wq<cr>
 
 
 
 
-""""""""""""""""""""""""""""""""调用函数区"""""""""""""""""""""""""""""""""""""""""""
 
-noremap <C-m> <esc>:call  CloseBufWin() <cr>
-noremap <c-l> <esc>:call SwitchBufWin("next") <cr>
-noremap <c-h> <esc>:call SwitchBufWin("previous") <cr>
+""""""""""""""""""""""""""""""""调用函数区""""""""""""""""""""""""""""""""""""""""""
+
+noremap <C-l> <esc>:call SwitchBufWin("next")<CR>
+noremap <C-h> <esc>:call SwitchBufWin("previous")<CR>
+noremap <C-n> <esc>:call CloseBufWin()<CR>
+
+
 
 """"""""""""""""""""""""""""""""函数区""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""切换到上一个或下一个buffer或窗口
-function! SwitchBufWin(cmd)
+"  切换到上一个或下一个buffer或窗口
+function SwitchBufWin(cmd)
 	let max_buf = bufnr('$')
 	let cur_buf = bufnr('%')
 	let min_buf = 0
@@ -428,20 +429,25 @@ function! SwitchBufWin(cmd)
 			return 4
 		endif
 	endif
-endfunction  
+endfunction
  
- """关闭当前buffer或窗口
-function! CloseBufWin()
+"  关闭当前buffer或窗口
+function CloseBufWin()
 	let total_buf = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
 	if total_buf > 1
-		:wq
-		return 0
+		w
+        bdelete 
+        return 0
 	else  
-		:w
-		bdelete 
+		wq
 		return 1
 	endif  
-endfunction  
+endfunction
+
+
+
+
+
 
 
 
