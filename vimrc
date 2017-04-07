@@ -387,6 +387,17 @@ noremap <C-j> <esc>:w<cr><bar><c-w>j
 noremap <C-k> <esc>:w<cr><bar><c-w>k
 
 
+" 如果是nvim运行
+if has("nvim")
+    set hidden   "为了从终端模式切换到其他buffer时不关闭终端
+
+    tnoremap <esc> <c-\><c-n>
+    tnoremap <c-[> <c-\><c-n>
+    tnoremap jj <c-\><c-n>
+    tnoremap jk <c-\><c-n>
+    tnoremap kj <c-\><c-n>
+
+endif
 
 
 
