@@ -386,6 +386,10 @@ noremap <C-s-tab> :w<cr><bar>:bp<CR>
 noremap <C-j> <esc>:w<cr><bar><c-w>j
 noremap <C-k> <esc>:w<cr><bar><c-w>k
 
+nnoremap # *
+nnoremap * #
+
+
 
 " 如果是nvim运行
 if has("nvim")
@@ -485,10 +489,10 @@ vnoremap K <Plug>(expand_region_expand)
 vnoremap J <Plug>(expand_region_shrink)
 
 "vim-smooth-scroll插件需要
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+" noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 "vim-airline插件,打开tabline功能,方便查看Buffer和切换,省去了minibufexpl插件 
 let g:airline#extensions#tabline#enabled = 1

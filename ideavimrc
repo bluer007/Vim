@@ -380,6 +380,8 @@ vnoremap <bs> c
 noremap f<Space> <Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR>
 inoremap f<Space> <Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR>
 
+nnoremap # *
+nnoremap * #
 
 
 
