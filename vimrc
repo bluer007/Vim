@@ -371,6 +371,7 @@ inoremap <c-d> <esc><c-d>
 inoremap <c-u> <esc><c-u>
 inoremap <c-y> <esc><c-y>a
 inoremap <c-e> <esc><c-e>a
+inoremap <c-w> <esc>ea
 inoremap <c-b> <esc>bi
 
 nnoremap  <esc><esc>  <esc>:nohl<cr><esc>
