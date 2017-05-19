@@ -267,6 +267,20 @@ if(g:iswindows)
 endif
 
 
+
+" 如果是nvim运行
+if has("nvim")
+    set hidden   "为了从终端模式切换到其他buffer时不关闭终端
+
+    tnoremap <esc> <c-\><c-n>
+    tnoremap <c-[> <c-\><c-n>
+    tnoremap jj <c-\><c-n>
+    tnoremap jk <c-\><c-n>
+    tnoremap kj <c-\><c-n>
+    set viminfo+=n~/.nvim/tmpfiles/viminfo
+
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""全局设置(不分系统和GUI)"""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -390,19 +404,7 @@ noremap <C-k> <esc>:w<cr><bar><c-w>k
 nnoremap # *
 nnoremap * #
 
-
-
-" 如果是nvim运行
-if has("nvim")
-    set hidden   "为了从终端模式切换到其他buffer时不关闭终端
-
-    tnoremap <esc> <c-\><c-n>
-    tnoremap <c-[> <c-\><c-n>
-    tnoremap jj <c-\><c-n>
-    tnoremap jk <c-\><c-n>
-    tnoremap kj <c-\><c-n>
-
-endif
+nnoremap f<Space> <esc>gg=G<esc>:w<cr>
 
 
 
@@ -423,9 +425,11 @@ function SwitchBufWin(cmd)
 	let min_buf = 0
 	if a:cmd != "previous"
 	    if cur_buf < max_buf
+			w
 			bn
 			return 0
 		else  
+			w
 			execute "normal! \<C-w>l"
 			return 1
 		endif  
@@ -438,9 +442,11 @@ function SwitchBufWin(cmd)
 			endif
 		endwhile
 		if min_buf < cur_buf
+			w
 			bp
 			return 3
 		else
+			w
 			execute "normal! \<C-w>h"
 			return 4
 		endif
