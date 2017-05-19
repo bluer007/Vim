@@ -404,8 +404,8 @@ noremap <C-k> <esc>:w<cr><bar><c-w>k
 nnoremap # *
 nnoremap * #
 
-nnoremap f<Space> <esc>gg=G<esc>:w<cr>
-
+"记住当前位置的格式化
+nnoremap f<Space> mx<esc>gg=G<esc>:w<cr>`x
 
 
 """"""""""""""""""""""""""""""""调用函数区""""""""""""""""""""""""""""""""""""""""""
@@ -420,50 +420,50 @@ noremap <C-n> <esc>:call CloseBufWin()<CR>
 
 "  切换到上一个或下一个buffer或窗口
 function SwitchBufWin(cmd)
-	let max_buf = bufnr('$')
-	let cur_buf = bufnr('%')
-	let min_buf = 0
-	if a:cmd != "previous"
-	    if cur_buf < max_buf
-			w
-			bn
-			return 0
-		else  
-			w
-			execute "normal! \<C-w>l"
-			return 1
-		endif  
-	else
-		let find_min = 0
-		while !find_min
-			let min_buf += 1
-			if buflisted(min_buf)
-				let find_min = 1
-			endif
-		endwhile
-		if min_buf < cur_buf
-			w
-			bp
-			return 3
-		else
-			w
-			execute "normal! \<C-w>h"
-			return 4
-		endif
-	endif
+    let max_buf = bufnr('$')
+    let cur_buf = bufnr('%')
+    let min_buf = 0
+    if a:cmd != "previous"
+        if cur_buf < max_buf
+            w
+            bn
+            return 0
+        else  
+            w
+            execute "normal! \<C-w>l"
+            return 1
+        endif  
+    else
+        let find_min = 0
+        while !find_min
+            let min_buf += 1
+            if buflisted(min_buf)
+                let find_min = 1
+            endif
+        endwhile
+        if min_buf < cur_buf
+            w
+            bp
+            return 3
+        else
+            w
+            execute "normal! \<C-w>h"
+            return 4
+        endif
+    endif
 endfunction
- 
+
 "  关闭当前buffer或窗口
 function CloseBufWin()
-	let total_buf = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
-	if total_buf > 1
-		w
+    let total_buf = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+    if total_buf > 1
+        w
         bdelete 
         return 0
-	else  
-		wq
-		return 1
-	endif  
+    else  
+        wq
+        return 1
+    endif  
 endfunction
 
 
