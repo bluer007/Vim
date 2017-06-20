@@ -388,6 +388,9 @@ inoremap <c-e> <esc><c-e>a
 inoremap <c-w> <esc>ea
 inoremap <c-b> <esc>bi
 
+nnoremap <c-w> <esc>e
+nnoremap <c-b> <esc>b
+
 nnoremap  <esc><esc>  <esc>:nohl<cr><esc>
 nnoremap  <enter> i<enter><esc>
 
@@ -407,6 +410,8 @@ nnoremap * #
 "记住当前位置的格式化
 nnoremap f<Space> mx<esc>gg=G<esc>:w<cr>`x
 
+"进入块选择模式快捷键
+nnoremap fv <c-v>
 
 """"""""""""""""""""""""""""""""调用函数区""""""""""""""""""""""""""""""""""""""""""
 
