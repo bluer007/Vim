@@ -424,7 +424,7 @@ noremap <C-n> <esc>:call CloseBufWin()<CR>
 """"""""""""""""""""""""""""""""函数区""""""""""""""""""""""""""""""""""""""""""""""""
 
 "  切换到上一个或下一个buffer或窗口
-function SwitchBufWin(cmd)
+function! SwitchBufWin(cmd)
     let max_buf = bufnr('$')
     let cur_buf = bufnr('%')
     let min_buf = 0
@@ -459,7 +459,7 @@ function SwitchBufWin(cmd)
 endfunction
 
 "  关闭当前buffer或窗口
-function CloseBufWin()
+function! CloseBufWin()
     let total_buf = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
     if total_buf > 1
         w
@@ -526,7 +526,7 @@ filetype plugin indent on
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-command E :NERDTreeToggle<CR>
+command! E :NERDTree<CR>
 
 "neocomplete.vim启用
 "let g:neocomplete#enable_at_startuT = 1
