@@ -210,15 +210,19 @@ endif
 
 
 
-"  < 判断操作系统是否是 Windows 还是 Linux >
+"  < 判断操作系统是否是 Windows / Linux / mac>
 let g:iswindows = 0
 let g:islinux = 0
 let g:isidea = 0   "是否为jetbrains系列ideavim插件的配置文件
+let g:ismac = 0
 if(has("win32") || has("win64") || has("win95") || has("win16"))
     let g:iswindows = 1
+elseif has('mac')
+    let g:ismac = 1
 else
     let g:islinux = 1
 endif
+
 
 "  < 判断是终端还是 Gvim >
 if has("gui_running")
@@ -236,6 +240,7 @@ endif
 " Linux系统""""""""""""""""""""""""""""""""""""""""""""""""
 if (g:islinux)
     "Linux系统 通用设置"""""""""""""""""""""""""""""""""""""
+    set clipboard=unnamedplus	 "将复制,粘贴,剪切, 默认使用+寄存器(linux下是剪切板)
 
     if !empty(glob("~/desktop"))
         cd ~/desktop
@@ -256,6 +261,7 @@ endif
 " Windows系统""""""""""""""""""""""""""""""""""""""""""""
 if(g:iswindows)
     "Windows系统 通用设置"""""""""""""""""""""""""""""""""""""
+    set clipboard=unnamed	 "将复制,粘贴,剪切, 默认使用*寄存器(windows/mac下是剪切板)
 
     "Windows系统 非通用设置""""""""""""""""""""""""""""""""""
     if (g:isGUI)     " Gvim版本
@@ -266,6 +272,19 @@ if(g:iswindows)
 
 endif
 
+" Mac系统""""""""""""""""""""""""""""""""""""""""""""
+if(g:ismac)
+    "Mac系统 通用设置"""""""""""""""""""""""""""""""""""""
+    set clipboard=unnamed	 "将复制,粘贴,剪切, 默认使用*寄存器(windows/mac下是剪切板)
+
+    "Mac系统 非通用设置""""""""""""""""""""""""""""""""""
+    if (g:isGUI)     " Gvim版本
+
+    else    " 终端版本
+
+    endif
+
+endif
 
 
 " 如果是nvim运行
@@ -295,7 +314,6 @@ set ignorecase        "搜索模式里忽略大小写
 set smartcase         "如果搜索模式包含大写字符，就大小写敏感搜索, 全部是小写时就忽略大小写, 前提是要启用 'set ignorecase', 本项才生效
 set incsearch       "在输入要搜索的文字时，实时匹配, 即时跳转到匹配处
 set cursorline                   "突出显示当前行
-set clipboard=unnamedplus	 "将复制,粘贴,剪切, 默认使用+寄存器(linux下是剪切板)
 set wrap		"自动换行, 一行字数超出窗口宽度后自动换行
 set tabstop=4
 set shiftwidth=4            "换行时自动缩进4个空格
