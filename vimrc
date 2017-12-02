@@ -335,21 +335,21 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""映射"""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <F2> <ESC> :w <bar> !babel-node % <enter>
-inoremap <F2> <ESC> :w <bar> !babel-node % <enter>
-vnoremap <F2> <ESC> :w <bar> !babel-node % <enter>
+nnoremap <F2> <ESC> :w <bar> !clear % !babel-node % <enter>
+inoremap <F2> <ESC> :w <bar> !clear % !babel-node % <enter>
+vnoremap <F2> <ESC> :w <bar> !clear % !babel-node % <enter>
 
-nnoremap <F3> <ESC> :w <bar> !node % <enter>
-inoremap <F3> <ESC> :w <bar> !node % <enter>
-vnoremap <F3> <ESC> :w <bar> !node % <enter>
+nnoremap <F3> <ESC> :w <bar> !clear % !node % <enter>
+inoremap <F3> <ESC> :w <bar> !clear % !node % <enter>
+vnoremap <F3> <ESC> :w <bar> !clear % !node % <enter>
 
-nnoremap <F4> <ESC> :w <bar> !ruby % <enter>
-inoremap <F4> <ESC> :w <bar> !ruby % <enter>
-vnoremap <F4> <ESC> :w <bar> !ruby % <enter>
+nnoremap <F4> <ESC> :w <bar> !clear % !ruby % <enter>
+inoremap <F4> <ESC> :w <bar> !clear % !ruby % <enter>
+vnoremap <F4> <ESC> :w <bar> !clear % !ruby % <enter>
 
-nnoremap <F5> <ESC> :w <bar> !php % <enter>
-inoremap <F5> <ESC> :w <bar> !php % <enter>
-vnoremap <F5> <ESC> :w <bar> !php % <enter>
+nnoremap <F5> <ESC> :w <bar> !clear % !php % <enter>
+inoremap <F5> <ESC> :w <bar> !clear % !php % <enter>
+vnoremap <F5> <ESC> :w <bar> !clear % !php % <enter>
 
 noremap <c-s> <esc>:w<CR>
 inoremap <c-s> <esc>:w<CR>a
@@ -588,6 +588,8 @@ Plug 'https://github.com/vim-airline/vim-airline.git'
 "文件管理器
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+"变量风格转换插件
+Plug 'https://github.com/tpope/vim-abolish.git'
 
 call plug#end()
 
