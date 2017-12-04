@@ -335,21 +335,21 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""映射"""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <F2> <ESC> :w <bar> !clear % !babel-node % <enter>
-inoremap <F2> <ESC> :w <bar> !clear % !babel-node % <enter>
-vnoremap <F2> <ESC> :w <bar> !clear % !babel-node % <enter>
+nnoremap <F2> <ESC> :w <bar> !clear && babel-node % <enter>
+inoremap <F2> <ESC> :w <bar> !clear && babel-node % <enter>
+vnoremap <F2> <ESC> :w <bar> !clear && babel-node % <enter>
 
-nnoremap <F3> <ESC> :w <bar> !clear % !node % <enter>
-inoremap <F3> <ESC> :w <bar> !clear % !node % <enter>
-vnoremap <F3> <ESC> :w <bar> !clear % !node % <enter>
+nnoremap <F3> <ESC> :w <bar> !clear && node % <enter>
+inoremap <F3> <ESC> :w <bar> !clear && node % <enter>
+vnoremap <F3> <ESC> :w <bar> !clear && node % <enter>
 
-nnoremap <F4> <ESC> :w <bar> !clear % !ruby % <enter>
-inoremap <F4> <ESC> :w <bar> !clear % !ruby % <enter>
-vnoremap <F4> <ESC> :w <bar> !clear % !ruby % <enter>
+nnoremap <F4> <ESC> :w <bar> !clear && ruby % <enter>
+inoremap <F4> <ESC> :w <bar> !clear && ruby % <enter>
+vnoremap <F4> <ESC> :w <bar> !clear && ruby % <enter>
 
-nnoremap <F5> <ESC> :w <bar> !clear % !php % <enter>
-inoremap <F5> <ESC> :w <bar> !clear % !php % <enter>
-vnoremap <F5> <ESC> :w <bar> !clear % !php % <enter>
+nnoremap <F5> <ESC> :w <bar> !clear && php % <enter>
+inoremap <F5> <ESC> :w <bar> !clear && php % <enter>
+vnoremap <F5> <ESC> :w <bar> !clear && php % <enter>
 
 noremap <c-s> <esc>:w<CR>
 inoremap <c-s> <esc>:w<CR>a
