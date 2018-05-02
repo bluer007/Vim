@@ -381,8 +381,8 @@ nnoremap <bs> <esc>i<bs>
 vnoremap <bs> c
 
 " 定制保存当前位置的格式化和保存全部文件快捷键
-noremap f<Space> <Esc>mx<esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR><esc>`x
-inoremap f<Space> <Esc>mx<Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR><esc>`x
+noremap m<Space> <Esc>mx<esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR><esc>`x
+inoremap m<Space> <Esc>mx<Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<CR><esc>`x
 
 nnoremap # *
 nnoremap * #

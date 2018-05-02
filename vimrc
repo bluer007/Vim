@@ -426,7 +426,7 @@ nnoremap # *
 nnoremap * #
 
 "记住当前位置的格式化
-nnoremap f<Space> mx<esc>gg=G<esc>:w<cr>`x
+nnoremap m<Space> mx<esc>gg=G<esc>:w<cr>`x
 
 "进入块选择模式快捷键
 nnoremap fv <c-v>
