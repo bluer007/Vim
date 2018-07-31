@@ -4,11 +4,19 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 
 
 
+
+
+[TOC]
+
+
+
 ## 使用方法(usage)
 
 ```
 终端下运行sudo .或install.sh
 ```
+
+
 
 
 
@@ -67,6 +75,8 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 
 
 
+
+
 ### Vim第三方插件快捷键 (Vim third party plug-in shortcut key)
 
 | 按键(映射)   | 功能               | 模式(普通模式N, 插入模式I, 选择模式V, 行选择模式HV, 列选择模式LV) | 命令                                                    | 插件                     |
@@ -80,6 +90,8 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | Ctrl + b     | 流畅向上滚动一屏   | N                                                            | :call smooth_scroll#up(&scroll*2, 0, 4)<CR>             | vim-smooth-scroll 未启用 |
 | Ctrl + f     | 流畅向下滚动一屏   | N                                                            | :call smooth_scroll#down(&scroll*2, 0, 4)<CR>           | vim-smooth-scroll 未启用 |
 | :E           | 打开/关闭目录树    | N                                                            |                                                         | nerdtree                 |
+
+
 
 
 
@@ -106,6 +118,8 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | nerdtree            | 文件管理器(目录树) | scrooloose/nerdtree                              |                        |
 | nerdtree-git-plugin | 文件管理器(目录树) | Xuyuanp/nerdtree-git-plugin                      |                        |
 | vim-abolish         | 变量风格转换插件   | https://github.com/tpope/vim-abolish.git         |                        |
+
+
 
 
 
