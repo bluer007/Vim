@@ -35,6 +35,9 @@ ls ~/.config/nvim/init.vim 1>/dev/null 2>/dev/null \
 sudo cp ./vimrc ~/.vim/vimrc \
     && echo 'Vim: copy ~/.vim/vimrc!'
 
+sudo cp ./vimrc ~/.vimrc \
+    && echo 'Vim: copy ~/.vimrc!'
+
 ls /etc/vim/vimrc 1>/dev/null 2>/dev/null \
     && sudo cp ./vimrc /etc/vim/vimrc \
     && echo 'Vim: copy /etc/vim/vimrc successfully!'

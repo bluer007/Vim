@@ -387,9 +387,20 @@ inoremap m<Space> <Esc>mx<Esc>:action ReformatCode<CR><Bar><Esc>:action SaveAll<
 nnoremap # *
 nnoremap * #
 
+noremap ! ^
+noremap @ $
+
 "进入块选择模式快捷键
 nnoremap fv <c-v>
 
+"撤销
+inoremap <c-z> <esc>ua
+nnoremap <c-z> <esc>u
+vnoremap <c-z> <esc>u
+
+"重做(反撤销)
+inoremap <c-r> <esc><c-r>a
+vnoremap <c-r> <esc><c-r>
 
 
 

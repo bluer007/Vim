@@ -425,11 +425,23 @@ noremap <C-k> <esc>:w<cr><bar><c-w>k
 nnoremap # *
 nnoremap * #
 
+noremap ! ^
+noremap @ $
+
 "记住当前位置的格式化
 nnoremap m<Space> mx<esc>gg=G<esc>:w<cr>`x
 
 "进入块选择模式快捷键
 nnoremap fv <c-v>
+
+"撤销
+inoremap <c-z> <esc>ua
+nnoremap <c-z> <esc>u
+vnoremap <c-z> <esc>u
+
+"重做(反撤销)
+inoremap <c-r> <esc><c-r>a
+vnoremap <c-r> <esc><c-r>
 
 """"""""""""""""""""""""""""""""调用函数区""""""""""""""""""""""""""""""""""""""""""
 
