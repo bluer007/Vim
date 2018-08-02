@@ -13,7 +13,11 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 ## 使用方法(usage)
 
 ```
-终端下运行sudo .或install.sh
+安装(install):
+终端下运行sudo ./install.sh
+
+卸载(uninstall):
+终端下运行sudo ./uninstall.sh
 ```
 
 
@@ -26,7 +30,8 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 
 | 按键(映射)         | 功能                                         | 模式(普通模式N, 插入模式I, 选择模式V, 行选择模式HV, 列选择模式LV) | 命令                                          | 备注           |
 | ------------------ | -------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------- | -------------- |
-| F3                 | node调试当前文件                             | N 或 I 或 V                                                  | <ESC> :w <bar> !clear && babel-node % <enter> |                |
+| F2                 | babel-node调试当前文件                       | N 或 I 或 V                                                  | <ESC> :w <bar> !clear && babel-node % <enter> |                |
+| F3                 | node调试当前文件                             | N 或 I 或 V                                                  | <ESC> :w <bar> !clear && node % <enter>       |                |
 | F4                 | ruby调试当前文件                             | N 或 I 或 V                                                  | <ESC> :w <bar> !clear && ruby % <enter>       |                |
 | F5                 | php调试当前文件                              | N 或 I 或 V                                                  | <ESC> :w <bar> !clear && php % <enter>        |                |
 | Ctrl + s           | 保存                                         | N 或 I                                                       | <esc>:w<CR> 或 <esc>:w<CR>a                   |                |
