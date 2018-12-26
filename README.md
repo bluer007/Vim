@@ -77,6 +77,18 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | Ctrl + n           | 跳转到下方的buffer(理解为标签)               | N 或 V                                                       | <esc>:call CloseBufWin()<CR>                  | 调用自定义函数 |
 | Ctrl + z       | 撤销                                         | N 或 I 或 V                                                  | <esc>ua 或 <esc>u                                            |        |
 | Ctrl + r       | 重做                                         | I 或 V                                                       | <esc><c-r>a 或 <esc><c-r>                                    |        |
+| vw | 选中当前单词 | N | viw | |
+| v" | 选中所在"间的内容 | N | vi" | |
+| v' | 选中所在'间的内容 | N | vi' | |
+| v( 或 v) | 选中所在()间的内容 | N | vi( 或 vi) | |
+| v[ 或 v] | 选中所在[]间的内容 | N | vi[ 或 vi] | |
+| v{ 或 v} | 选中所在{}间的内容 | N | vi{ 或 vi} | |
+| yw | 复制当前单词 | N | yiw | |
+| y" | 复制所在"间的内容 | N | yi" | |
+| y' | 复制所在'间的内容 | N | yi' | |
+| y( 或 y) | 复制所在()间的内容 | N | yi( 或 yi) | |
+| y[ 或 y] | 复制所在[]间的内容 | N | yi[ 或 yi] | |
+| y{ 或 y} | 复制所在{}间的内容 | N | yi{ 或 yi} | |
 
 
 
@@ -165,4 +177,16 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | fv             | 进入块选择模式                               | N                                                            | <c-v>                                                        |        |
 | Ctrl + z       | 撤销                                         | N 或 I 或 V                                                  | <esc>ua 或 <esc>u                                            |        |
 | Ctrl + r       | 重做                                         | I 或 V                                                       | <esc><c-r>a 或 <esc><c-r>                                    |        |
+| vw | 选中当前单词 | N | viw | |
+| v" | 选中所在"间的内容 | N | vi" | |
+| v' | 选中所在'间的内容 | N | vi' | |
+| v( 或 v) | 选中所在()间的内容 | N | vi( 或 vi) | |
+| v[ 或 v] | 选中所在[]间的内容 | N | vi[ 或 vi] | |
+| v{ 或 v} | 选中所在{}间的内容 | N | vi{ 或 vi} | |
+| yw | 复制当前单词 | N | yiw | |
+| y" | 复制所在"间的内容 | N | yi" | |
+| y' | 复制所在'间的内容 | N | yi' | |
+| y( 或 y) | 复制所在()间的内容 | N | yi( 或 yi) | |
+| y[ 或 y] | 复制所在[]间的内容 | N | yi[ 或 yi] | |
+| y{ 或 y} | 复制所在{}间的内容 | N | yi{ 或 yi} | |
 

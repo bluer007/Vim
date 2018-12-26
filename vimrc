@@ -443,6 +443,28 @@ vnoremap <c-z> <esc>u
 inoremap <c-r> <esc><c-r>a
 vnoremap <c-r> <esc><c-r>
 
+"常用选择操作
+nnoremap vw viw
+nnoremap v" vi"
+nnoremap v' vi'
+nnoremap v{ vi{
+nnoremap v} vi}
+nnoremap v( vi(
+nnoremap v) vi)
+nnoremap v[ vi[
+nnoremap v] vi]
+
+"常用复制操作
+nnoremap yw yiw
+nnoremap y" yi"
+nnoremap y' yi'
+nnoremap y{ yi{
+nnoremap y} yi}
+nnoremap y( yi(
+nnoremap y) yi)
+nnoremap y[ yi[
+nnoremap y] yi]
+
 """"""""""""""""""""""""""""""""调用函数区""""""""""""""""""""""""""""""""""""""""""
 
 noremap <C-l> <esc>:call SwitchBufWin("next")<CR>
