@@ -465,6 +465,27 @@ nnoremap y) yi)
 nnoremap y[ yi[
 nnoremap y] yi]
 
+"常用删除操作
+nnoremap dw diw
+nnoremap d" di"
+nnoremap d' di'
+nnoremap d{ di{
+nnoremap d} di}
+nnoremap d( di(
+nnoremap d) di)
+nnoremap d[ di[
+nnoremap d] di]
+nnoremap cw ciw
+nnoremap c" ci"
+nnoremap c' ci'
+nnoremap c{ ci{
+nnoremap c} ci}
+nnoremap c( ci(
+nnoremap c) ci)
+nnoremap c[ ci[
+nnoremap c] ci]
+
+
 """"""""""""""""""""""""""""""""调用函数区""""""""""""""""""""""""""""""""""""""""""
 
 noremap <C-l> <esc>:call SwitchBufWin("next")<CR>
