@@ -83,18 +83,21 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | v( 或 v) | 选中所在()间的内容 | N | vi( 或 vi) | |
 | v[ 或 v] | 选中所在[]间的内容 | N | vi[ 或 vi] | |
 | v{ 或 v} | 选中所在{}间的内容 | N | vi{ 或 vi} | |
+| v< 或 v> | 选中所在<>间的内容 | N | vi< 或 vi> | |
 | yw | 复制当前单词 | N | yiw | |
 | y" | 复制所在"间的内容 | N | yi" | |
 | y' | 复制所在'间的内容 | N | yi' | |
 | y( 或 y) | 复制所在()间的内容 | N | yi( 或 yi) | |
 | y[ 或 y] | 复制所在[]间的内容 | N | yi[ 或 yi] | |
 | y{ 或 y} | 复制所在{}间的内容 | N | yi{ 或 yi} | |
+| y< 或 y> | 复制所在<>间的内容 | N | yi< 或 yi> | |
 | cw 或 dw | 删除当前单词 | N | ciw 或 diw | |
 | c" 或 d" | 删除所在"间的内容 | N | ci" 或 di" | |
 | c'  或 d' | 删除所在'间的内容 | N | ci'  或 di' | |
 | c( 或 c) 或 d( 或 d) | 删除所在()间的内容 | N | ci( 或 ci) 或 di( 或 di) | |
 | c[ 或 c] 或 d[ 或 d] | 删除所在[]间的内容 | N | ci[ 或 ci] 或 di[ 或 di] | |
 | c{ 或 c} 或 d{ 或 d} | 删除所在{}间的内容 | N | ci{ 或 ci} 或 di{ 或 di} | |
+| c< 或 c> 或 d< 或 d> | 删除所在<>间的内容 | N | ci< 或 ci> 或 di< 或 di> | |
 
 
 
@@ -189,16 +192,19 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | v( 或 v) | 选中所在()间的内容 | N | vi( 或 vi) | |
 | v[ 或 v] | 选中所在[]间的内容 | N | vi[ 或 vi] | |
 | v{ 或 v} | 选中所在{}间的内容 | N | vi{ 或 vi} | |
+| v< 或 v> | 选中所在<>间的内容 | N | vi< 或 vi> | |
 | yw | 复制当前单词 | N | yiw | |
 | y" | 复制所在"间的内容 | N | yi" | |
 | y' | 复制所在'间的内容 | N | yi' | |
 | y( 或 y) | 复制所在()间的内容 | N | yi( 或 yi) | |
 | y[ 或 y] | 复制所在[]间的内容 | N | yi[ 或 yi] | |
 | y{ 或 y} | 复制所在{}间的内容 | N | yi{ 或 yi} | |
+| y< 或 y> | 复制所在<>间的内容 | N | yi< 或 yi> | |
 | cw 或 dw | 删除当前单词 | N | ciw 或 diw | |
 | c" 或 d" | 删除所在"间的内容 | N | ci" 或 di" | |
 | c'  或 d' | 删除所在'间的内容 | N | ci'  或 di' | |
 | c( 或 c) 或 d( 或 d) | 删除所在()间的内容 | N | ci( 或 ci) 或 di( 或 di) | |
 | c[ 或 c] 或 d[ 或 d] | 删除所在[]间的内容 | N | ci[ 或 ci] 或 di[ 或 di] | |
 | c{ 或 c} 或 d{ 或 d} | 删除所在{}间的内容 | N | ci{ 或 ci} 或 di{ 或 di} | |
+| c< 或 c> 或 d< 或 d> | 删除所在<>间的内容 | N | ci< 或 ci> 或 di< 或 di> | |
 

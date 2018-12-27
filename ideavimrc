@@ -412,6 +412,8 @@ nnoremap v( vi(
 nnoremap v) vi)
 nnoremap v[ vi[
 nnoremap v] vi]
+nnoremap v< vi<
+nnoremap v> vi>
 
 "常用复制操作
 nnoremap yw yiw
@@ -423,6 +425,8 @@ nnoremap y( yi(
 nnoremap y) yi)
 nnoremap y[ yi[
 nnoremap y] yi]
+nnoremap y< yi<
+nnoremap y> yi>
 
 "常用删除操作
 nnoremap dw diw
@@ -434,6 +438,8 @@ nnoremap d( di(
 nnoremap d) di)
 nnoremap d[ di[
 nnoremap d] di]
+nnoremap d< di<
+nnoremap d> di>
 nnoremap cw ciw
 nnoremap c" ci"
 nnoremap c' ci'
@@ -443,6 +449,8 @@ nnoremap c( ci(
 nnoremap c) ci)
 nnoremap c[ ci[
 nnoremap c] ci]
+nnoremap c< ci<
+nnoremap c> ci>
 
 
 
