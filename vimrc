@@ -455,6 +455,8 @@ nnoremap v[ vi[
 nnoremap v] vi]
 nnoremap v< vi<
 nnoremap v> vi>
+nnoremap v! v^
+nnoremap v@ v$
 
 "常用复制操作
 nnoremap yw yiw
@@ -468,6 +470,8 @@ nnoremap y[ yi[
 nnoremap y] yi]
 nnoremap y< yi<
 nnoremap y> yi>
+nnoremap y! v^y
+nnoremap y@ v$y
 
 "常用删除操作
 nnoremap dw diw
@@ -481,6 +485,8 @@ nnoremap d[ di[
 nnoremap d] di]
 nnoremap d< di<
 nnoremap d> di>
+nnoremap d! v^d
+nnoremap d@ v$d
 nnoremap cw ciw
 nnoremap c" ci"
 nnoremap c' ci'
@@ -492,6 +498,25 @@ nnoremap c[ ci[
 nnoremap c] ci]
 nnoremap c< ci<
 nnoremap c> ci>
+nnoremap c! v^c
+nnoremap c@ v$c
+
+"常用替换操作
+nnoremap rw viw"_dP<esc>
+nnoremap R" vi""_dP<esc>
+nnoremap R' vi'"_dP<esc>
+nnoremap R{ vi{"_dP<esc>
+nnoremap R} vi}"_dP<esc>
+nnoremap R( vi("_dP<esc>
+nnoremap R) vi)"_dP<esc>
+nnoremap R[ vi["_dP<esc>
+nnoremap R] vi]"_dP<esc>
+nnoremap R< vi<"_dP<esc>
+nnoremap R> vi>"_dP<esc>
+nnoremap R! v^"_dP<esc>
+nnoremap R@ v$"_dP<esc>
+
+
 
 
 """"""""""""""""""""""""""""""""调用函数区""""""""""""""""""""""""""""""""""""""""""
