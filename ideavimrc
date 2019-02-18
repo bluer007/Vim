@@ -368,9 +368,13 @@ inoremap <c-y> <esc><c-y>a
 inoremap <c-e> <esc><c-e>a
 inoremap <c-w> <esc>ea
 inoremap <c-b> <esc>bi
+inoremap <c-1> <esc>^i
+inoremap <c-2> <esc>$a
 
 nnoremap <c-w> <esc>e
 nnoremap <c-b> <esc>b
+nnoremap <c-1> <esc>^
+nnoremap <c-2> <esc>$
 
 nnoremap  <esc><esc>  <esc>:nohl<cr><esc>
 nnoremap  <enter> i<enter><esc>

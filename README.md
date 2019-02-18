@@ -113,6 +113,8 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | R< 或 R> | 替换所在<>间的内容为剪切板内容 | N | vi<"_dP<esc> 或 vi>"_dP<esc> | |
 | R! | 替换当前位置到行首的内容为剪切板内容 | N | v^"_dP<esc> | |
 | R@ | 替换当前位置到行末的内容为剪切板内容 | N | v$"_dP<esc> | |
+| Ctrl + 1 | 跳转到行首 | I 或 N | <esc>^i 或 <esc>^ | mac下失效 |
+| Ctrl + 2 | 跳转到行尾 | I 或 N | <esc>^$ 或 <esc>$ | mac下失效 |
 
 
 
@@ -237,4 +239,6 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | R< 或 R> | 替换所在<>间的内容为剪切板内容 | N | vi<"_dP<esc> 或 vi>"_dP<esc> | |
 | R! | 替换当前位置到行首的内容为剪切板内容 | N | v^"_dP<esc> | |
 | R@ | 替换当前位置到行末的内容为剪切板内容 | N | v$"_dP<esc> | |
+| Ctrl + 1 | 跳转到行首 | I 或 N | <esc>^i 或 <esc>^ | |
+| Ctrl + 2 | 跳转到行尾 | I 或 N | <esc>^$ 或 <esc>$ | |
 

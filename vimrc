@@ -405,9 +405,13 @@ inoremap <c-y> <esc><c-y>a
 inoremap <c-e> <esc><c-e>a
 inoremap <c-w> <esc>ea
 inoremap <c-b> <esc>bi
+inoremap <c-1> <esc>^i    " mac下失效
+inoremap <c-2> <esc>$a    " mac下失效
 
 nnoremap <c-w> <esc>e
 nnoremap <c-b> <esc>b
+nnoremap <c-1> <esc>^    " mac下失效
+nnoremap <c-2> <esc>$    " mac下失效
 
 nnoremap  <esc><esc>  <esc>:nohl<cr><esc>
 nnoremap  <enter> i<enter><esc>
