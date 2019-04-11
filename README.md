@@ -84,6 +84,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | v[ 或 v] | 选中所在[]间的内容 | N | vi[ 或 vi] | |
 | v{ 或 v} | 选中所在{}间的内容 | N | vi{ 或 vi} | |
 | v< 或 v> | 选中所在<>间的内容 | N | vi< 或 vi> | |
+| v` | 选中所在`间的内容 | N | vi` | |
 | v! | 选中当前位置到行首的内容 | N | v^ | |
 | v@ | 选中当前位置到行末的内容 | N | v$ | |
 | yw | 复制当前单词 | N | yiw | |
@@ -93,6 +94,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | y[ 或 y] | 复制所在[]间的内容 | N | yi[ 或 yi] | |
 | y{ 或 y} | 复制所在{}间的内容 | N | yi{ 或 yi} | |
 | y< 或 y> | 复制所在<>间的内容 | N | yi< 或 yi> | |
+| y` | 复制所在`间的内容 | N | yi` | |
 | y! | 复制当前位置到行首的内容 | N | v^y | |
 | y@ | 复制当前位置到行末的内容 | N | v$y | |
 | cw 或 dw | 删除当前单词 | N | ciw 或 diw | |
@@ -102,6 +104,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | c[ 或 c] 或 d[ 或 d] | 删除所在[]间的内容 | N | ci[ 或 ci] 或 di[ 或 di] | |
 | c{ 或 c} 或 d{ 或 d} | 删除所在{}间的内容 | N | ci{ 或 ci} 或 di{ 或 di} | |
 | c< 或 c> 或 d< 或 d> | 删除所在<>间的内容 | N | ci< 或 ci> 或 di< 或 di> | |
+| c` 或 d` | 删除所在`间的内容 | N | ci` 或 di` | |
 | c! 或 d! | 删除当前位置到行首的内容 | N | v^c 或 v^d | |
 | c@ 或 d! | 删除当前位置到行末的内容 | N | v$c 或 v$d | |
 | rw | 替换当前单词为剪切板内容 | N | viw"_dP<esc> | |
@@ -111,6 +114,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | R[ 或 R] | 替换所在[]间的内容为剪切板内容 | N | vi["_dP<esc> 或 vi]"_dP<esc> | |
 | R{ 或 R} | 替换所在{}间的内容为剪切板内容 | N | vi{"_dP<esc> 或 vi}"_dP<esc> | |
 | R< 或 R> | 替换所在<>间的内容为剪切板内容 | N | vi<"_dP<esc> 或 vi>"_dP<esc> | |
+| R` | 替换所在`间的内容为剪切板内容 | N | vi`"_dP<esc> | |
 | R! | 替换当前位置到行首的内容为剪切板内容 | N | v^"_dP<esc> | |
 | R@ | 替换当前位置到行末的内容为剪切板内容 | N | v$"_dP<esc> | |
 | Ctrl + 1 | 跳转到行首 | I 或 N | <esc>^i 或 <esc>^ | mac下失效 |
@@ -210,6 +214,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | v[ 或 v] | 选中所在[]间的内容 | N | vi[ 或 vi] | |
 | v{ 或 v} | 选中所在{}间的内容 | N | vi{ 或 vi} | |
 | v< 或 v> | 选中所在<>间的内容 | N | vi< 或 vi> | |
+| v` | 选中所在`间的内容 | N | vi` | |
 | v! | 选中当前位置到行首的内容 | N | v^ | |
 | v@ | 选中当前位置到行末的内容 | N | v$ | |
 | yw | 复制当前单词 | N | yiw | |
@@ -219,6 +224,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | y[ 或 y] | 复制所在[]间的内容 | N | yi[ 或 yi] | |
 | y{ 或 y} | 复制所在{}间的内容 | N | yi{ 或 yi} | |
 | y< 或 y> | 复制所在<>间的内容 | N | yi< 或 yi> | |
+| y` | 复制所在`间的内容 | N | yi` | |
 | y! | 复制当前位置到行首的内容 | N | v^y | |
 | y@ | 复制当前位置到行末的内容 | N | v$y | |
 | cw 或 dw | 删除当前单词 | N | ciw 或 diw | |
@@ -228,6 +234,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | c[ 或 c] 或 d[ 或 d] | 删除所在[]间的内容 | N | ci[ 或 ci] 或 di[ 或 di] | |
 | c{ 或 c} 或 d{ 或 d} | 删除所在{}间的内容 | N | ci{ 或 ci} 或 di{ 或 di} | |
 | c< 或 c> 或 d< 或 d> | 删除所在<>间的内容 | N | ci< 或 ci> 或 di< 或 di> | |
+| c` 或 d` | 删除所在`间的内容 | N | ci` 或 di` | |
 | c! 或 d! | 删除当前位置到行首的内容 | N | v^c 或 v^d | |
 | c@ 或 d! | 删除当前位置到行末的内容 | N | v$c 或 v$d | |
 | rw | 替换当前单词为剪切板内容 | N | viw"_dP<esc> | |
@@ -237,6 +244,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | R[ 或 R] | 替换所在[]间的内容为剪切板内容 | N | vi["_dP<esc> 或 vi]"_dP<esc> | |
 | R{ 或 R} | 替换所在{}间的内容为剪切板内容 | N | vi{"_dP<esc> 或 vi}"_dP<esc> | |
 | R< 或 R> | 替换所在<>间的内容为剪切板内容 | N | vi<"_dP<esc> 或 vi>"_dP<esc> | |
+| R` | 替换所在`间的内容为剪切板内容 | N | vi`"_dP<esc> | |
 | R! | 替换当前位置到行首的内容为剪切板内容 | N | v^"_dP<esc> | |
 | R@ | 替换当前位置到行末的内容为剪切板内容 | N | v$"_dP<esc> | |
 | Ctrl + 1 | 跳转到行首 | I 或 N | <esc>^i 或 <esc>^ | |

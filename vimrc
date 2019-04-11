@@ -459,6 +459,7 @@ nnoremap v[ vi[
 nnoremap v] vi]
 nnoremap v< vi<
 nnoremap v> vi>
+nnoremap v` vi`
 nnoremap v! v^
 nnoremap v@ v$
 
@@ -474,6 +475,7 @@ nnoremap y[ yi[
 nnoremap y] yi]
 nnoremap y< yi<
 nnoremap y> yi>
+nnoremap y` yi`
 nnoremap y! v^y
 nnoremap y@ v$y
 
@@ -489,6 +491,7 @@ nnoremap d[ di[
 nnoremap d] di]
 nnoremap d< di<
 nnoremap d> di>
+nnoremap d` di`
 nnoremap d! v^d
 nnoremap d@ v$d
 nnoremap cw ciw
@@ -502,6 +505,7 @@ nnoremap c[ ci[
 nnoremap c] ci]
 nnoremap c< ci<
 nnoremap c> ci>
+nnoremap c` ci`
 nnoremap c! v^c
 nnoremap c@ v$c
 
@@ -517,6 +521,7 @@ nnoremap R[ vi["_dP<esc>
 nnoremap R] vi]"_dP<esc>
 nnoremap R< vi<"_dP<esc>
 nnoremap R> vi>"_dP<esc>
+nnoremap R` vi`"_dP<esc>
 nnoremap R! v^"_dP<esc>
 nnoremap R@ v$"_dP<esc>
 
