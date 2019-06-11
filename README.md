@@ -119,6 +119,8 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | R@ | 替换当前位置到行末的内容为剪切板内容 | N | v$"_dP<esc> | |
 | Ctrl + 1 | 跳转到行首 | I 或 N | <esc>^i 或 <esc>^ | mac下失效 |
 | Ctrl + 2 | 跳转到行尾 | I 或 N | <esc>^$ 或 <esc>$ | mac下失效 |
+| gu | 转换当前单词为全大写 |  N | <esc>viwgUU |  |
+| gi | 转换当前单词为全小写 |  N | <esc>viwguu |  |
 
 
 
@@ -249,4 +251,6 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | R@ | 替换当前位置到行末的内容为剪切板内容 | N | v$"_dP<esc> | |
 | Ctrl + 1 | 跳转到行首 | I 或 N | <esc>^i 或 <esc>^ | |
 | Ctrl + 2 | 跳转到行尾 | I 或 N | <esc>^$ 或 <esc>$ | |
+| gu | 转换当前单词为全大写 |  N | <esc>viwgUU |  |
+| gi | 转换当前单词为全小写 |  N | <esc>viwguu |  |
 
