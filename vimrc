@@ -528,6 +528,8 @@ nnoremap R@ v$"_dP<esc>
 "大小写切换
 nnoremap gu <esc>viwgUU
 nnoremap gi <esc>viwguu
+vnoremap gu gUU
+vnoremap gi guu
 
 
 

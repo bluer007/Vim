@@ -121,6 +121,8 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | Ctrl + 2 | 跳转到行尾 | I 或 N | <esc>^$ 或 <esc>$ | mac下失效 |
 | gu | 转换当前单词为全大写 |  N | <esc>viwgUU |  |
 | gi | 转换当前单词为全小写 |  N | <esc>viwguu |  |
+| gu | 转换当前单词为全大写 |  V | gUU |  |
+| gi | 转换当前单词为全小写 |  V | guu |  |
 
 
 
@@ -253,4 +255,6 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | Ctrl + 2 | 跳转到行尾 | I 或 N | <esc>^$ 或 <esc>$ | |
 | gu | 转换当前单词为全大写 |  N | <esc>viwgUU |  |
 | gi | 转换当前单词为全小写 |  N | <esc>viwguu |  |
+| gu | 转换当前单词为全大写 |  V | gUU |  |
+| gi | 转换当前单词为全小写 |  V | guu |  |
 
