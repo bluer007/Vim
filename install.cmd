@@ -1,28 +1,28 @@
 @echo off
 
-echo ½øÈë¹¤×÷Ä¿Â¼: %~dp0
+echo è¿›å…¥å·¥ä½œç›®å½•: %~dp0
 cd /d %~dp0
 
-::¸´ÖÆÖ÷ÌâÎÄ¼ş
+::å¤åˆ¶ä¸»é¢˜æ–‡ä»¶
 mkdir "%USERPROFILE%\vimfiles\colors" 1>nul 2>nul
 copy /y /b  monokai.vim  "%USERPROFILE%\vimfiles\colors" 1>nul    && echo successfully:    copy /y /b  monokai.vim  "%USERPROFILE%\vimfiles\colors"
 copy /y /b  Tomorrow-Night-Eighties.vim  "%USERPROFILE%\vimfiles\colors" 1>nul    && echo successfully:    copy /y /b  Tomorrow-Night-Eighties.vim  "%USERPROFILE%\vimfiles\colors"
 	
-::±¸·İÅäÖÃÎÄ¼ş
+::å¤‡ä»½é…ç½®æ–‡ä»¶
 copy /y /b   "%USERPROFILE%\.vimrc"  "%USERPROFILE%\.vimrc.bak" 1>nul    && echo successfully:    copy /y /b   "%USERPROFILE%\.vimrc"  "%USERPROFILE%\.vimrc.bak"
 
-::¸´ÖÆvimÅäÖÃÎÄ¼ş
+::å¤åˆ¶vimé…ç½®æ–‡ä»¶
 copy /y /b  vimrc "%USERPROFILE%\.vimrc" 1>nul    && echo successfully:    copy /y /b  vimrc "%USERPROFILE%\.vimrc"
 
-::¸´ÖÆideavimÅäÖÃÎÄ¼ş
+::å¤åˆ¶ideavimé…ç½®æ–‡ä»¶
 copy /y /b  ideavimrc "%USERPROFILE%\.ideavimrc" 1>nul    && echo successfully:    copy /y /b  ideavimrc "%USERPROFILE%\.ideavimrc"
 
-::ÉèÖÃÔÊĞípowershellÖ´ĞĞ½Å±¾
+::è®¾ç½®å…è®¸powershellæ‰§è¡Œè„šæœ¬
 powershell "Set-ExecutionPolicy -Scope CurrentUser RemoteSigned"
 
-::ÏÂÔØ²¢°²×°vim-plug²å¼ş¹ÜÀíÆ÷
+::ä¸‹è½½å¹¶å®‰è£…vim-plugæ’ä»¶ç®¡ç†å™¨
 if  exist "%USERPROFILE%\vimfiles\autoload\plug.vim" (
-	echo °²×°ÅäÖÃÎÄ¼ş³É¹¦, ÇëÔËĞĞvimºóÊÖ¹¤ÔËĞĞ ^<esc^>:PlugInstall ÃüÁî
+	echo å®‰è£…é…ç½®æ–‡ä»¶æˆåŠŸ, è¯·è¿è¡Œvimåæ‰‹å·¥è¿è¡Œ ^<esc^>:PlugInstall å‘½ä»¤
 	exit /b 0
 )
 
@@ -35,10 +35,10 @@ echo      "~\vimfiles\autoload\plug.vim" >> "%temp%\download_vim_plug.ps1"
 echo    ) >> "%temp%\download_vim_plug.ps1"
 echo  ) >> "%temp%\download_vim_plug.ps1"
 
-powershell "%temp%\download_vim_plug.ps1"  ||      echo '°²×°Ê§°Ü, vim-plug²å¼ş¹ÜÀíÆ÷, ÏêÇé¿´https://github.com/junegunn/vim-plug'   && echo 'Vim-plug: install successfully!'
+powershell "%temp%\download_vim_plug.ps1"  ||      echo 'å®‰è£…å¤±è´¥, vim-plugæ’ä»¶ç®¡ç†å™¨, è¯¦æƒ…çœ‹https://github.com/junegunn/vim-plug'   && echo 'Vim-plug: install successfully!'
 
 
-echo '°²×°ÅäÖÃÎÄ¼ş³É¹¦, ÇëÔËĞĞvimºóÊÖ¹¤ÔËĞĞ <esc>:PlugInstall ÃüÁî'
+echo 'å®‰è£…é…ç½®æ–‡ä»¶æˆåŠŸ, è¯·è¿è¡Œvimåæ‰‹å·¥è¿è¡Œ <esc>:PlugInstall å‘½ä»¤'
 
 
 
