@@ -14,10 +14,11 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 
 ```
 安装(install):
-终端下运行sudo ./install.sh
+Mac/Linux终端下运行 sudo ./install.sh 
+Windows Cmd下运行 ./install.cmd 
 
 卸载(uninstall):
-终端下运行sudo ./uninstall.sh
+Mac/Linux终端下运行 sudo ./uninstall.sh
 ```
 
 
@@ -106,7 +107,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | c< 或 c> 或 d< 或 d> | 删除所在<>间的内容 | N | ci< 或 ci> 或 di< 或 di> | |
 | c` 或 d` | 删除所在`间的内容 | N | ci` 或 di` | |
 | c! 或 d! | 删除当前位置到行首的内容 | N | v^c 或 v^d | |
-| c@ 或 d! | 删除当前位置到行末的内容 | N | v$c 或 v$d | |
+| c@ 或 d@ | 删除当前位置到行末的内容 | N | v$c 或 v$d | |
 | rw | 替换当前单词为剪切板内容 | N | viw"_dP<esc> | |
 | R" | 替换所在"间的内容为剪切板内容 | N | vi""_dP<esc> | |
 | R' | 替换所在'间的内容为剪切板内容 | N | vi'"_dP<esc> | |
@@ -174,7 +175,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 
 
 
-### Ideavim 自定义快捷键 (Ideavim custom keyboard shortcuts)
+### IdeaVim 自定义快捷键 (IdeaVim custom keyboard shortcuts)
 
 | 按键(映射)     | 功能                                         | 模式(普通模式N, 插入模式I, 选择模式V, 行选择模式HV, 列选择模式LV) | 命令                                                         | 备注   |
 | -------------- | -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------ |
@@ -240,7 +241,7 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | c< 或 c> 或 d< 或 d> | 删除所在<>间的内容 | N | ci< 或 ci> 或 di< 或 di> | |
 | c` 或 d` | 删除所在`间的内容 | N | ci` 或 di` | |
 | c! 或 d! | 删除当前位置到行首的内容 | N | v^c 或 v^d | |
-| c@ 或 d! | 删除当前位置到行末的内容 | N | v$c 或 v$d | |
+| c@ 或 d@ | 删除当前位置到行末的内容 | N | v$c 或 v$d | |
 | rw | 替换当前单词为剪切板内容 | N | viw"_dP<esc> | |
 | R" | 替换所在"间的内容为剪切板内容 | N | vi""_dP<esc> | |
 | R' | 替换所在'间的内容为剪切板内容 | N | vi'"_dP<esc> | |
@@ -258,3 +259,120 @@ This is my vimrc file, include my custom keymap, plugins and theme.
 | gu | 转换当前单词为全大写 |  V | gUU |  |
 | gi | 转换当前单词为全小写 |  V | guu |  |
 
+
+
+### Idea 自定义快捷键 (Idea custom keyboard shortcuts)
+
+| 快捷键     | 描述  |
+| --------   | ------  |
+| ---------------------------  | ---------------------------   |
+| 目录树 | 目录树  |
+|alt + s  |	 定位到目录树的当前文件  |   
+|alt + d  |	 打开目录树选中的文件  |   
+|alt + p	|	跳转到目录树  |   
+| ---------------------------  | ---------------------------   |
+| 标签	|	标签	  |   
+|alt + q	|	切换到左边tab/框  |   
+|alt + w	|	切换到右边tab/框  |   
+|alt + e	|	关闭当前tab  |   
+|alt + 1	|	切换到第1个tab  |   
+|alt + 2	|	切换到第2个tab  |   
+|alt + 3	|	切换到第3个tab  |   
+|alt + 4	|	切换到第4个tab  |   
+|alt + 5	|	切换到第5个tab  |   
+|alt + 6	|	切换到最后一个tab  |  
+| ---------------------------  | ---------------------------   | 
+|版本控制|	版本控制  |   
+|alt + g  |	打开/取消git版本控制框  |   
+|ctrl + d|  对选中文件进行git的文件改动比较(若打开了git版本控制框)  |   
+|alt + shift +a|	添加选中文件到git缓冲区(若打开了git版本控制框)  |   
+|alt + l|	提交(commit)文件(若打开了git版本控制框)  |   
+|alt + ctrl + z |	回滚选中的文件(若选中了git版本控制框中的文件)  |   
+|alt + shift + l|	推送(push)代码(若打开了git版本控制框)  |   
+|alt + b	|	打开git分支框  |   
+| ---------------------------  | ---------------------------   |
+|   取消   | 取消 |   
+|shift + esc 或 esc|	取消当前框/窗口  |  
+| ---------------------------  | ---------------------------   |
+|  搜索    | 搜索 |   
+|shift + shift | 打开万能搜索框  |      
+|alt + f|	   查找/替换当前文件的字符串  |   
+|ctrl + f|	   查找当前文件的字符串  |   
+| ctrl + shift + n 或 alt + shift + n |	全局打开指定文件  |   
+|ctrl +shift+f	|	全局搜索字符串  |   
+|ctrl +shift+r	|	全局替换字符串  |   
+| ---------------------------  | ---------------------------   |
+|  工具  | 工具 |   
+|alt + t	|	打开/取消terminal终端框  |   
+|alt + 7	|	打开/取消structure结构框  |   
+|alt + m	|	打开/取消maven框  |   
+|alt + n	|	打开/取消run框  |   
+| ---------------------------  | ---------------------------   |
+|  代码  | 代码 |  
+|F12	|	跳转到定义  |   
+|ctrl + F12	|	跳转到实现  |   
+|alt + j	|	跳转到上一个方法  |   
+|alt + k	|	跳转到下一个方法  |   
+|alt + o	|	弹出代码补全框  |   
+| ---------------------------  | ---------------------------   |
+|  调试  | 调试 |  
+|alt + i	|	打开/取消debug/service框  |   
+|alt + y 	|	打开debug配置框  |   
+|ctrl + l	|	清除debug框的日志(若打开了debug框)  |  
+|F3|		停止debug  |    
+|F4|		debug  |    
+|F5|		恢复debug  |   
+|F6|		step over(debug到下一行代码)  |   
+|F7|		step into(debug跳进去)|	  |   
+|F8|		step out(debug跳出去)|	  |   
+|F9|		设置/取消断点  |   
+|alt + F8|		打开表达式计算器框  |   
+| ---------------------------  | ---------------------------   |
+|    文件 | 文件 |   
+|ctrl + tab|		切换到上一个最近编辑的文件  |   
+|ctrl + shift + tab	|	切换到下一个最近编辑的文件  |   
+| ---------------------------  | ---------------------------   |
+
+
+
+### Idea第三方插件快捷键 (Idea third party plug-in shortcut key)
+
+| 快捷键     | 描述  |
+| --------   | ------  |
+| ---------------------------  | ---------------------------   |
+| CamelCase |  CamelCase |
+| alt + u  |	 切换当前单词的命名策略(驼峰<->下划线<->全大写) |  
+| ---------------------------  | ---------------------------   |
+| Translation | Translation |
+| ctrl + shift + y  | 翻译当前选中的单词/句子	  |   
+| ---------------------------  | ---------------------------   |
+
+
+
+### Idea第三方插件列表 (List of Idea third-party plug-ins)
+
+| 插件名              | 功能               | 备注                   |
+| ------------------- | ------------------ | ---------------------- |
+| ideavim            |     vim插件     |        |
+|   Scroll From Source		 | 可以在project中定位当前文件 |       |
+|   PHP Advanced AutoComplete		 | 增强phpstome的自动提醒功能  |       |
+|   GoToTabs 		 | 允许用alt+数字去切换不同的tab  |       |
+|   key promoter	 [可选]触发ide不同操作时, 弹出窗口显示对应快捷键  |       |
+|   Markdown Navigator	比自带的md插件好用的md编辑, 预览插件  |       |
+|   Wrap to Column	代码对齐线  |       |
+|   CamelCase		 | 多种变量命名风格中转换  |       |
+|   Translate		 | 	[可选]基于有道的翻译插件  |       |
+|   gittoolbox		 | git的常用操作插件  |       |
+|   Free mybatis plugin    方便mybatis开发的插件(主要是编写mapper.xml时方便)  |       |
+|   Grep Console		 | 	给ide控制台不同级别的日志设置高亮颜色  |       |
+|   JRebel for IntelliJ		 | 热部署插件  |       |
+|   MyBatis Log Plugin		 | 把mybatis输出的sql日志还原为完整sql  |       |
+|   MyBatis plugin		 | 收费, 方便mybatis开发的插件(主要是编写mapper.xml时方便)  |       |
+|   Nyan Progress Bar		 | 修改ide所有进度条为一个彩虹颜色的进度条, 个性化  |       |
+|   Rainbow Brackets		 | 代码中的括号设置为不同颜色, 方便匹配括号层级关系  |       |
+|   RestfulToolkit		 | 	spring体系的根据url定位接口等实用功能  |       |
+|   save actions		 | 	保存时进行自动格式化等功能  |       |
+|   code screenshots		 | 可以把代码导出成图片的插件  |       |
+|   jrebel-mybatisplus-extension		 | 辅助jrebel热部署, 让修改mybatis中的mapp.xml后实时生效  |       |
+|   Translation		 | 	支持多种语言的翻译插件  |       |
+|   File Watchers		 | 	允许检测文件变动去触发自定义操作  |       |
