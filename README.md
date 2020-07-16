@@ -289,6 +289,7 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |alt + l|	提交(commit)文件(若打开了git版本控制框)  |   
 |alt + ctrl + z |	回滚选中的文件(若选中了git版本控制框中的文件)  |   
 |alt + shift + l|	推送(push)代码(若打开了git版本控制框)  |   
+|ctrl + shift + k |	提交和推送代码(commit和push)(若打开了git版本控制框)  |   
 |alt + b	|	打开git分支框  |   
 | ---------------------------  | ---------------------------   |
 |   取消   | 取消 |   
