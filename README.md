@@ -377,3 +377,6 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |   jrebel-mybatisplus-extension		 | 辅助jrebel热部署, 让修改mybatis中的mapp.xml后实时生效  |       |
 |   Translation		 | 	支持多种语言的翻译插件  |       |
 |   File Watchers		 | 	允许检测文件变动去触发自定义操作  |       |
+|   activate-power-mode		 | 	显示编码速度特效  |       |
+|   power mode II		 | 	代码特效插件  |       |
+|   Background Image Plus +		 | 	自动切换背景图  |       |
