@@ -307,6 +307,7 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |alt + t	|	打开/取消terminal终端框  |   
 |alt + 7	|	打开/取消structure结构框  |   
 |alt + m	|	打开/取消maven框  |   
+|alt + shift + r	|	刷新maven依赖(重新导入maven依赖)  |   
 |alt + n	|	打开/取消run框  |   
 | ---------------------------  | ---------------------------   |
 |  代码  | 代码 |  
@@ -319,6 +320,7 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |  调试  | 调试 |  
 |alt + i	|	打开/取消debug/service框  |   
 |alt + y 	|	打开debug配置框  |   
+|alt + shift + e	|	刷新项目(实现idea自带热部署功能)  |   
 |ctrl + l	|	清除debug框的日志(若打开了debug框)  |  
 |F3|		停止debug  |    
 |F4|		debug  |    
