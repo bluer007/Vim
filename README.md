@@ -360,8 +360,8 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |   Scroll From Source		 | 可以在project中定位当前文件 |       |
 |   PHP Advanced AutoComplete		 | 增强phpstome的自动提醒功能  |       |
 |   GoToTabs 		 | 允许用alt+数字去切换不同的tab  |       |
-|   key promoter	 [可选]触发ide不同操作时, 弹出窗口显示对应快捷键  |       |
-|   Markdown Navigator	比自带的md插件好用的md编辑, 预览插件  |       |
+|   key promoter	  | [可选]触发ide不同操作时, 弹出窗口显示对应快捷键  |       |
+|   Markdown Navigator	 | [不用选, 会跟ide自带的md插件冲突] 比自带的md插件好用的md编辑, 预览插件  |       |
 |   Wrap to Column	代码对齐线  |       |
 |   CamelCase		 | 多种变量命名风格中转换  |       |
 |   Translate		 | 	[可选]基于有道的翻译插件  |       |
