@@ -362,11 +362,11 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |   GoToTabs 		 | 允许用alt+数字去切换不同的tab  |       |
 |   key promoter	  | [可选]触发ide不同操作时, 弹出窗口显示对应快捷键  |       |
 |   Markdown Navigator	 | [不用选, 会跟ide自带的md插件冲突] 比自带的md插件好用的md编辑, 预览插件  |       |
-|   Wrap to Column	代码对齐线  |       |
+|   Wrap to Column	| 代码对齐线  |       |
 |   CamelCase		 | 多种变量命名风格中转换  |       |
 |   Translate		 | 	[可选]基于有道的翻译插件  |       |
 |   gittoolbox		 | git的常用操作插件  |       |
-|   Free mybatis plugin    方便mybatis开发的插件(主要是编写mapper.xml时方便)  |       |
+|   Free mybatis plugin  |  方便mybatis开发的插件(主要是编写mapper.xml时方便)  |       |
 |   Grep Console		 | 	给ide控制台不同级别的日志设置高亮颜色  |       |
 |   JRebel for IntelliJ		 | 热部署插件  |       |
 |   MyBatis Log Plugin		 | 把mybatis输出的sql日志还原为完整sql  |       |
@@ -382,3 +382,4 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |   activate-power-mode		 | 	显示编码速度特效  |       |
 |   power mode II		 | 	代码特效插件  |       |
 |   Background Image Plus +		 | 	自动切换背景图  |       |
+|   lombok		 | 	java用的自动生成代码插件  |       |
