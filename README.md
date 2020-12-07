@@ -384,3 +384,4 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |   Background Image Plus +		 | 	自动切换背景图  |       |
 |   lombok		 | 	java用的自动生成代码插件  |       |
 |   PowerMouse		 | 	鼠标手势插件, 方便阅读代码(长点右键查看定义, 左右键同时按查找引用)  |       |
+|   maven helper		 | 	方便查看maven依赖冲突的插件  |       |
