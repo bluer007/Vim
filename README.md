@@ -356,7 +356,7 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 
 | 插件名              | 功能               | 备注                   |
 | ------------------- | ------------------ | ---------------------- |
-| ideavim            |     vim插件     |        |
+|   ideavim            |     vim插件     |        |
 |   Scroll From Source		 | 可以在project中定位当前文件 |       |
 |   PHP Advanced AutoComplete		 | 增强phpstome的自动提醒功能  |       |
 |   GoToTabs 		 | 允许用alt+数字去切换不同的tab  |       |
@@ -385,3 +385,4 @@ Mac/Linux终端下运行 sudo ./uninstall.sh
 |   lombok		 | 	java用的自动生成代码插件  |       |
 |   PowerMouse		 | 	鼠标手势插件, 方便阅读代码(长点右键查看定义, 左右键同时按查找引用)  |       |
 |   maven helper		 | 	方便查看maven依赖冲突的插件  |       |
+|   Zoolytic - Zookeeper tool		 | 	连接zookeeper的插件  |       |
